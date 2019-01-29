@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="./build/buy_menu.js"></script>
+	<title>buy_menu</title>
+</head>   
+   <body style="background:url(images/bg3.jpg);no-repeat;background-size:100% 100%; background-attachment: fixed;">
+   <font color="white">
+   <center>
+        <h1 align="center">发布购电请求</h1>
+		<textarea style="width:800px;height:200px;font-family:Arial;font-size:20px;background:transparent;border-style:none;color:white">
+购电需知：
+
+1.发布购电请求后，系统将自动从你的账户中扣除申购电量的5倍作为保证金。
+
+2.购买电量需要大于零，且截止时间至少为10分钟（本系统截止时间以秒计算，所以该值必须大于等于600）
+
+3.进入交易结算阶段后，购电方可以启动交易结算，系统将从你缴纳的保证金中扣去相应电费转给卖家，剩余保证金退还。
+
+4.请注意不要发布虚假购电请求，不要违背交易规则，否则系统将取消你的交易资格并扣除保证金。
+		</textarea>
+		<center><form name="buy_form">
+			<p style="" class="pro">所需电量:
+			<input id="elec_need" type="text" maxlength="20"/>
+			<p style="" class="pro">截止时间:
+			<input id="time_end" type="text" maxlength="20"/>
+		<div class="box">
+			<div style=""><button id = "buy_submit" >提交</button></div>
+		</div>	
+	</center>
+	</font>
+   </body>
+</html>

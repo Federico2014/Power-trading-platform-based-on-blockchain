@@ -1,0 +1,46 @@
+﻿<html>
+
+   <body style="background:url(images/bg3.jpg);no-repeat;background-size:100% 100%; background-attachment: fixed;"><center>
+		<font color="white">
+        <h1>交易记录</h1>
+		<textarea style="width:800px;height:150px;font-family:Arial;font-size:20px;background:transparent;border-style:none;color:white">
+公开报价需知:
+
+1. 请用户在指定时间内发送真实报价和识别码。如未在规定时间内发送正确的真实报价和识别码，系统将取消交易资格并扣除保证金。
+
+结算需知：
+
+1. 请购电用户在公开报价结束后指定时间内进行结算操作，否则将会判定违规，系统将取消交易资格并扣除保证金。
+		</textarea>
+		<div style="height:200px;width:800px;border: 1px solid #804040;margin:20px">
+ 	 	<table id = "info_table">
+    	</table>
+		</div>
+		<div class="box" style="float:center;margin:20px">
+			<button style="width:120px;height:30px;" id= "buy_info" onClick = "">显示购买记录</button>
+			<button style="width:120px;height:30px;" id= "sell_info" onClick = "">显示竞标记录</button>
+		</div>	
+
+		<form name="sell_form">
+			<p style="" class="pro">编　　号:
+			<input id="request_idd" type="text" maxlength="20"/>
+            <p style="" class="pro">真实报价:
+			<input id="ssprice" type="text" maxlength="20"/>
+                        
+			<p style="" class="pro">识别代码:   
+			<input id="ssrand" type="text" maxlength="20"/>
+        </form>
+		<div class="box">
+			<div style=""><button id= "sEprice" onClick = "">提　交</button></div>
+		</div>	
+               
+            <form name="buy_form">
+            <p style="" class="pro">编　　号:
+			<input id="request_idd_settle" type="text" maxlength="20"/>
+            </form>
+		<div class="box">
+		<div style=""><button id= "requestSettle" onClick = "">结　算</button></div>
+		</div>	
+		</font>
+	</center></body>
+</html>

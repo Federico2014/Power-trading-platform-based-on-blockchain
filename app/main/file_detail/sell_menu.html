@@ -1,0 +1,44 @@
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+</head>
+   <body style="background:url(images/bg3.jpg);no-repeat;background-size:100% 100%; background-attachment: fixed;">
+   <font color="white">
+   <center>
+        <h1>全网购电总览</h1>
+		
+		<textarea style="width:800px;height:200px;font-family:Arial;font-size:20px;color:white;background:transparent;border-style:none;">
+交易规则：
+					
+1.查询到购电方的购电请求后即可开始密封报价，在密封报价阶段，售电方的真实报价将不会提交给系统，也无法看到其他售电方的报价。
+
+2.在提交密封报价的同时，需缴纳保证金，保证金的金额为：2×电价×出售电量，未缴纳保证金的用户不得参与竞标。
+
+2.一旦密封报价阶段结束，则进入公开报价阶段。所有用户不能再提交密封报价。已经提交过密封报价的用户需在此时提交真实报价和随机数。
+
+3.参与竞标的售电方如未能在指定时间内提交真是报价或提交的真实报价不正确，则取消交易资格，扣除保证金。
+
+4.当进入交易结算阶段后。系统将自动匹配买卖双方，完成资金转移和电量变化。并在交易结束后退回遵守规则的用户的保证金。
+		</textarea>
+		<div style="height:200px;width:800px;margin:20px;border: 1px solid #804040;">  <!--overflow:scroll;-->
+			<table id = "sell_table" style="word-break: break-all">
+ 			</table>
+		</div>
+		<form name="buy_form" >
+            <p style="" class="pro">编　　号:
+			<input id="request_id" type="text" maxlength="20"/>
+			<p style="" class="pro">出售电量:
+			<input id="elec_sell" type="text" maxlength="20"/>
+			<p style="" class="pro">报价金额:   
+			<input id="sprice" type="text" maxlength="50"/>
+            <p style="" class="pro">识别代码:   
+			<input id="srand" type="text" maxlength="50"/>
+		<div class="box">
+			<div style=""><button id="sEprice" onClick = "sEPrice()">提 交</button></div>
+		</div>
+	</center>
+	</font>
+	</body>
+</html>
